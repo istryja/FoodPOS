@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+  <script>
+    // Your Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAKXIJgf4OV1kbXFte_-otkzQG9znL4WFw",
+      authDomain: "istry-pos.firebaseapp.com",
+      projectId: "istry-pos",
+      storageBucket: "istry-pos.appspot.com",
+      messagingSenderId: "971679889173",
+      appId: "1:971679889173:web:f5bca7d106025346809b1c",
+      measurementId: "G-4E9XW3GDDQ"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="inventory-container">
+    <header>
+      <h1>Inventory Management</h1>
+      <button id="backToDashboardBtn">Back to Dashboard</button>
+    </header>
+
+    <section class="add-inventory">
+      <h2>Add New Inventory Item</h2>
+      <form id="addInventoryForm">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" required>
+        
+        <label for="itemPrice">Price:</label>
+        <input type="number" id="itemPrice" step="0.01" required>
+        
+        <label for="itemStock">Stock Quantity:</label>
+        <input type="number" id="itemStock" required>
+        
+        <button type="submit">Add Item</button>
+      </form>
+    </section>
+
+    <section class="inventory-list">
+      <h2>Inventory Items</h2>
+      <ul id="inventoryList">
+        <!-- Inventory items will be dynamically loaded here -->
+      </ul>
+    </section>
+  </div>
+  <script src="inventory.js"></script>
+</body>
+</html>

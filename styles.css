@@ -1,0 +1,361 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  
+  .login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .dashboard-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .dashboard-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .summary-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .active-orders {
+    margin-top: 20px;
+  }
+  
+  #orderList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #orderList li {
+    padding: 10px;
+    background-color: #e9ecef;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  .order-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .menu-list, .order-summary {
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+  }
+  
+  .menu-list ul, .order-summary ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-list li, .order-summary li {
+    padding: 10px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  #totalCost {
+    font-weight: bold;
+  }
+  .inventory-container, .order-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Inventory Form */
+  .add-inventory form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .add-inventory label {
+    font-weight: bold;
+  }
+  
+  .add-inventory input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-inventory button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-inventory button:hover {
+    background-color: #218838;
+  }
+  
+  /* Inventory List */
+  .inventory-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .inventory-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inventory-list li:hover {
+    background-color: #e2e6ea;
+  }
+  
+  .inventory-list button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .inventory-list button.delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .inventory-list button.update-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .inventory-list button.delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .inventory-list button.update-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .inventory-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .inventory-list button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  /* Order Container */
+.order-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  .menu-list li.out-of-stock {
+    background-color: #f4cccc;
+  }
+  
+  .menu-list li:hover {
+    background-color: #e2e6ea;
+  }
+  
+  .menu-list button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-list button:hover {
+    background-color: #218838;
+  }
+  
+  .order-summary {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .order-summary h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .order-summary ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-summary li {
+    padding: 10px;
+    background-color: #e9ecef;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .order-summary p {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .complete-order-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .complete-order-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-list button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  

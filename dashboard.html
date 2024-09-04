@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POS Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <h1>Welcome to the POS System</h1>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <section class="dashboard-summary">
+      <div class="summary-box">
+        <h3>Sales Today</h3>
+        <p id="salesToday">$0</p>
+      </div>
+      <div class="summary-box">
+        <h3>Total Orders</h3>
+        <p id="totalOrders">0</p>
+      </div>
+      <div class="summary-box">
+        <h3>Inventory Status</h3>
+        <p id="inventoryStatus">Good</p>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="newOrderBtn">New Order</button>
+      <button id="viewReportsBtn">View Reports</button>
+      <button id="manageInventoryBtn">Manage Inventory</button>
+    </section>
+
+    <section class="active-orders">
+      <h2>Active Orders</h2>
+      <ul id="orderList">
+        <li>No active orders</li>
+      </ul>
+    </section>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>

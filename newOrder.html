@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+  <script>
+    // Your Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAKXIJgf4OV1kbXFte_-otkzQG9znL4WFw",
+      authDomain: "istry-pos.firebaseapp.com",
+      projectId: "istry-pos",
+      storageBucket: "istry-pos.appspot.com",
+      messagingSenderId: "971679889173",
+      appId: "1:971679889173:web:f5bca7d106025346809b1c",
+      measurementId: "G-4E9XW3GDDQ"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Order</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="order-container">
+    <header>
+      <h1>Create New Order</h1>
+      <button id="backToDashboardBtn">Back to Dashboard</button>
+    </header>
+
+    <section class="menu-list">
+      <h2>Menu Items</h2>
+      <ul id="menuItems">
+        <!-- Menu items will be dynamically loaded here -->
+      </ul>
+    </section>
+
+    <section class="order-summary">
+      <h2>Order Summary</h2>
+      <ul id="orderSummary">
+        <!-- Selected items will appear here -->
+      </ul>
+      <p>Total: <span id="totalCost">$0</span></p>
+      <button id="completeOrderBtn">Complete Order</button>
+    </section>
+  </div>
+  <script src="newOrder.js"></script>
+</body>
+</html>
