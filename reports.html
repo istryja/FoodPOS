@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POS Reports</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Add Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+  <script>
+    // Your Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAKXIJgf4OV1kbXFte_-otkzQG9znL4WFw",
+      authDomain: "istry-pos.firebaseapp.com",
+      projectId: "istry-pos",
+      storageBucket: "istry-pos.appspot.com",
+      messagingSenderId: "971679889173",
+      appId: "1:971679889173:web:f5bca7d106025346809b1c",
+      measurementId: "G-4E9XW3GDDQ"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+</head>
+<body>
+  <div class="reports-container">
+    <header>
+      <h1>Reports & Analytics</h1>
+      <button id="backToDashboardBtn">Back to Dashboard</button>
+    </header>
+
+    <!-- Date Range Selection -->
+    <section class="date-filters">
+      <h2>Select Date Range</h2>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate">
+      <button id="filterBtn">Get Reports</button>
+    </section>
+
+    <!-- Sales Summary -->
+    <section class="sales-summary">
+      <h2>Sales Overview</h2>
+      <p>Total Sales: <span id="totalSales">$0</span></p>
+      <canvas id="salesChart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Top Selling Items -->
+    <section class="top-selling-items">
+      <h2>Top Selling Items</h2>
+      <ul id="topSellingItems"></ul>
+    </section>
+
+    <!-- Inventory Status -->
+    <section class="inventory-status">
+      <h2>Inventory Status</h2>
+      <ul id="inventoryStatus"></ul>
+    </section>
+  </div>
+
+  <script src="reports.js"></script>
+</body>
+</html>
